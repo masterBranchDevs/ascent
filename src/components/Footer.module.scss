@@ -1,0 +1,150 @@
+.footer {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 60px 0 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.footerLogo {
+  flex: 1;
+  max-width: 300px;
+  
+  a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+  
+  .primaryText {
+    color: var(--accent-color);
+  }
+  
+  .secondaryText {
+    color: var(--light-text);
+  }
+  
+  p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+.footerNav {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  padding: 0 15px;
+  
+  h3 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      margin-bottom: 10px;
+      
+      a {
+        color: var(--light-text);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
+    }
+  }
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
+  p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+}
+
+.social {
+  display: flex;
+  
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-left: 10px;
+    color: var(--light-text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: var(--accent-color);
+      color: var(--primary-color);
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .topSection {
+    flex-direction: column;
+  }
+  
+  .footerLogo {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .footerNav {
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    flex: 1 0 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bottomSection {
+    flex-direction: column;
+    
+    p {
+      margin-bottom: 15px;
+    }
+  }
+  
+  .column {
+    flex: 1 0 100%;
+  }
+}
