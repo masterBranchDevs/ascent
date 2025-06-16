@@ -19,7 +19,7 @@
 
 .footerLogo {
   flex: 1;
-  max-width: 300px;
+  max-width: 500px;
   
   a {
     text-decoration: none;
@@ -40,6 +40,14 @@
   p {
     margin-top: 10px;
     font-size: 0.9rem;
+  }
+}
+
+.licenceDetails{
+  ul{
+    list-style: none;
+    padding: 0;
+    font-weight: 600;
   }
 }
 
