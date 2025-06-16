@@ -1,0 +1,152 @@
+.pageHeader {
+  background: url("/images/hero-background-mobile.webp") center center/cover no-repeat;
+  color: var(--light-text);
+  text-align: center;
+  padding: 150px 0 80px;
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--light-text);
+  }
+  
+  p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.storyContent {
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.storyImage {
+  .imageWrapper {
+    height: 400px;
+    background-image: url('/src/assets/story-img.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.ourMission {
+  background-color: var(--light-background);
+}
+
+.missionContent {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  
+  p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.valueCard {
+  background-color: var(--background-color);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    
+    .valueIcon {
+      background-color: var(--accent-color);
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+  }
+  
+  h3 {
+    margin: 20px 0 15px;
+  }
+}
+
+.valueIcon {
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 992px) {
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .storyImage {
+    order: 1;
+  }
+  
+  .storyContent {
+    order: 2;
+  }
+  
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pageHeader {
+    padding: 120px 0 60px;
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,398 @@
+.contactContainer {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.heroSection {
+  background: url("/images/hero-background-mobile.webp") center center/cover no-repeat;
+  color: var(--light-text);
+  text-align: center;
+  padding: 150px 0 80px;
+  margin-bottom: 50px;
+
+  h1 {
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #ffffff;
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.contactContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto 5rem;
+  padding: 0 2rem;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contactInfo {
+  h2 {
+    font-size: 2.25rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  > p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 2.5rem;
+  }
+
+  .infoItem {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+
+    .iconContainer {
+      width: 50px;
+      height: 50px;
+      background-color: #f0f7ff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1.5rem;
+      flex-shrink: 0;
+
+      i {
+        font-size: 1.25rem;
+        color: var(--primary-color);
+      }
+    }
+
+    .infoText {
+      h3 {
+        font-size: 1.25rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #666;
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+
+  .socialLinks {
+    margin-top: 3rem;
+
+    h3 {
+      font-size: 1.25rem;
+      color: #333;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .socialIcons {
+      display: flex;
+      gap: 1rem;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: #f0f7ff;
+        border-radius: 50%;
+        color: var(--primary-color);
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: var(--primary-color);
+          color: #ffffff;
+          transform: translateY(-3px);
+        }
+
+        i {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+.contactForm {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 2.25rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  .formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .formGroup {
+    margin-bottom: 1.5rem;
+
+    label {
+      display: block;
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+      color: #333;
+      transition: all 0.3s ease;
+
+      &:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
+  }
+
+  .submitButton {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 0.875rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+
+    &:hover {
+      opacity: 0.85;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .successMessage {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1.5rem;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 1rem;
+
+    i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+.mapSection {
+  max-width: 1200px;
+  margin: 0 auto 5rem;
+  padding: 0 2rem;
+
+  h2 {
+    font-size: 2.25rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .mapContainer {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    .mapPlaceholder {
+      width: 100%;
+      height: 100%;
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+
+      i {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #007bff;
+      }
+
+      p {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
+.faqSection {
+  max-width: 1200px;
+  margin: 0 auto 5rem;
+  padding: 0 2rem;
+
+  h2 {
+    font-size: 2.25rem;
+    color: #333;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .faqList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .faqItem {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      color: #333;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #666;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 992px) {
+  .heroSection {
+    height: 40vh;
+
+    .overlay {
+      h1 {
+        font-size: 2.75rem;
+      }
+
+      p {
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  .contactForm,
+  .contactInfo {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .heroSection {
+    height: 30vh;
+
+    .overlay {
+      h1 {
+        font-size: 2.25rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .contactForm {
+    padding: 1.5rem;
+
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
+
+  .contactInfo {
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    > p {
+      font-size: 1rem;
+    }
+  }
+
+  .mapSection {
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    .mapContainer {
+      height: 300px;
+    }
+  }
+
+  .faqSection {
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    .faqItem {
+      padding: 1.5rem;
+    }
+  }
+}
