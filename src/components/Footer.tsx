@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from './Footer.module.scss';
-import {NAVIGATION_LINKS} from "@/constant/site";
-import {SOCIALS} from "@/constant/contact";
+import { NAVIGATION_LINKS } from "@/constant/site";
+import { SOCIALS } from "@/constant/contact";
 
 const Footer = () => {
   return (
@@ -22,19 +22,27 @@ const Footer = () => {
               </ul>
             </div>
           </div>
+
           <div className={styles.footerNav}>
             <div className={styles.column}>
               <h3>Quick Links</h3>
               <ul>
                 {NAVIGATION_LINKS.map((NAVIGATION_LINK, index) => (
-                    <li key={NAVIGATION_LINK.title + index}>
-                      <Link href={NAVIGATION_LINK.link}>
-                        {NAVIGATION_LINK.title}
-                      </Link>
-                    </li>
+                  <li key={NAVIGATION_LINK.title + index}>
+                    <Link href={NAVIGATION_LINK.link}>
+                      {NAVIGATION_LINK.title}
+                    </Link>
+                  </li>
                 ))}
+                <li>
+                  <Link href="/termsandconditions">Terms & Conditions</Link>
+                </li>
+                <li>
+                  <Link href="/privacypolicy">Privacy Policy</Link>
+                </li>
               </ul>
             </div>
+
             <div className={styles.column}>
               <h3>Contact</h3>
               <ul>
@@ -46,13 +54,14 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
         <div className={styles.bottomSection}>
           <p>&copy; {new Date().getFullYear()} Scoop Investment. All rights reserved.</p>
           <div className={styles.social}>
             {SOCIALS.map((item, index) => (
-                <a href={item.link} aria-label={item.title} key={item.title + index}>
-                  <item.icon />
-                </a>
+              <a href={item.link} aria-label={item.title} key={item.title + index}>
+                <item.icon />
+              </a>
             ))}
           </div>
         </div>

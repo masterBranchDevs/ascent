@@ -1,0 +1,237 @@
+// Privacy Policy SCSS - Updated to match rewritten component
+$bg-gradient: linear-gradient(135deg, #02171e 0%, #01524b 100%);
+$section-bg: #1e293b;
+$section-border: #22d3ee;
+$text-color: #e2e8f0;
+$text-muted: #94a3b8;
+$highlight-color: #22d3ee;
+$radius: 0.75rem;
+$transition: 0.3s ease;
+
+.privacy-policy {
+  min-height: 100vh;
+  background-color: #ffffff;
+
+  // Navbar spacer
+  &__navbar-spacer {
+    height: 5rem; // 80px
+  }
+
+  &__container {
+    max-width: 80rem; // 1280px
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+
+    @media (max-width: 1024px) {
+      padding: 2rem 1rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+    }
+  }
+
+  // Left Column - Title and Introduction
+  &__header {
+    @media (min-width: 1024px) {
+      position: sticky;
+      top: 6rem; // 96px
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2.5rem;
+    line-height: 1.1;
+
+    @media (min-width: 1024px) {
+      font-size: 3.75rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__intro {
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #6b7280;
+      margin: 0;
+    }
+  }
+
+  // Right Column - Content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  &__section {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    letter-spacing: 0.025em;
+  }
+
+  // Subsections
+  &__subsection {
+    margin-bottom: 2.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__subsection-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  &__subsection-text {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #374151;
+    margin: 0;
+
+    &--with-margin {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  // Sub-subsections
+  &__sub-subsection {
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__sub-subsection-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+
+  &__sub-subsection-text {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #374151;
+    margin: 0;
+  }
+}
+
+// Responsive breakpoints
+@media (max-width: 640px) {
+  .privacy-policy {
+    &__container {
+      padding: 1.5rem 1rem;
+    }
+
+    &__grid {
+      gap: 2rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &__section-title {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &__subsection {
+      margin-bottom: 2rem;
+    }
+
+    &__sub-subsection {
+      margin-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// Print styles
+@media print {
+  .privacy-policy {
+    &__navbar-spacer {
+      display: none;
+    }
+
+    &__container {
+      max-width: none;
+      padding: 1rem;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    &__header {
+      position: static;
+    }
+
+    &__title {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// Dark mode support (optional)
+@media (prefers-color-scheme: dark) {
+  .privacy-policy {
+    background-color: #0f172a;
+
+    &__title {
+      color: #f8fafc;
+    }
+
+    &__intro p {
+      color: #94a3b8;
+    }
+
+    &__section-title {
+      color: #f8fafc;
+    }
+
+    &__subsection-title,
+    &__sub-subsection-title {
+      color: #e2e8f0;
+    }
+
+    &__subsection-text,
+    &__sub-subsection-text {
+      color: #cbd5e1;
+    }
+  }
+}

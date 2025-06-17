@@ -1,0 +1,96 @@
+// Variables
+$bg-gradient: linear-gradient(135deg, #02171e 0%, #01524b 100%);
+$section-bg: #1e293b;
+$section-border: #22d3ee;
+$text-color: #e2e8f0;
+$text-muted: #94a3b8;
+$highlight-color: #22d3ee;
+$radius: 0.75rem;
+$transition: 0.3s ease;
+
+// Layout
+.terms-page {
+  min-height: 100vh;
+  background: $bg-gradient;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .terms-container {
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  .terms-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .terms-header {
+      text-align: center;
+
+      .terms-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: $text-color;
+        margin-bottom: 0.5rem;
+      }
+
+      .terms-description {
+        color: $text-muted;
+        font-size: 1.1rem;
+        max-width: 750px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .terms-content {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .terms-section {
+      background: $section-bg;
+      padding: 1.75rem;
+      border-radius: $radius;
+      border-left: 3px solid $section-border;
+      transition: $transition;
+
+      &:hover {
+        background: darken($section-bg, 3%);
+      }
+
+      .terms-paragraph {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: $text-color;
+
+        strong {
+          display: block;
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: $text-color;
+          margin-bottom: 0.5rem;
+
+          &::before {
+            content: '→ ';
+            color: $highlight-color;
+          }
+        }
+      }
+    }
+  }
+
+  .terms-link {
+    color: $highlight-color;
+    text-decoration: underline;
+    transition: $transition;
+
+    &:hover {
+      color: lighten($highlight-color, 10%);
+    }
+  }
+}
