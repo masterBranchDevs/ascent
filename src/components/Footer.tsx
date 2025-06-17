@@ -18,7 +18,7 @@ const Footer = () => {
               <ul>
                 <li>Chirag Jain</li>
                 <li>SEBI Registered Individual Research Analyst</li>
-                <li>SEBI Reg No. INH000008941</li>
+                <li>SEBI Reg No. INH000020624</li>
               </ul>
             </div>
           </div>
@@ -55,8 +55,8 @@ const Footer = () => {
               <ul>
                 <li>G-17 Shyam plaza,</li>
                 <li>VIP road, Surat - 395007</li>
-                <li>contact@scoopinvestment.com</li>
-                <li>+91-7567473055</li>
+                <li><a href='mailto:contact@scoopinvestment.com'>contact@scoopinvestment.com</a></li>
+                <li><a href='callto:+91-7567473055'>+91-7567473055</a></li>
               </ul>
             </div>
           </div>

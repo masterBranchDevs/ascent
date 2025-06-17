@@ -76,7 +76,7 @@ const NAVIGATION_LINKS = [
         link: "/services",
     },
     {
-        title: "contact",
+        title: "Contact",
         link: "/contact",
     }
 ]
