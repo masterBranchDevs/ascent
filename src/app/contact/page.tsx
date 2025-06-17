@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 import styles from "./contact.module.scss";
-import {GET_IN_TOUCH, SOCIALS} from "@/constant/contact";
+import { GET_IN_TOUCH, SOCIALS, FAQS_DATA } from "@/constant/contact";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -185,37 +185,14 @@ const Contact = () => {
       <div className={styles.faqSection}>
         <h2>Frequently Asked Questions</h2>
         <div className={styles.faqList}>
-          <div className={styles.faqItem}>
-            <h3>What investment services do you offer?</h3>
-            <p>
-              We offer a comprehensive range of investment services including venture capital,
-              private equity, wealth management, strategic advisory, asset management, and real estate investment.
-            </p>
-          </div>
 
-          <div className={styles.faqItem}>
-            <h3>What is your minimum investment amount?</h3>
-            <p>
-              Our minimum investment amount varies depending on the specific service and investment opportunity. 
-              Please contact us directly to discuss your investment goals and we'll provide you with the relevant information.
-            </p>
-          </div>
+          {FAQS_DATA.map((faq, index) => (
+            <div className={styles.faqItem} id={faq.question + index} key={faq.id}>
+              <h3>{faq.question}</h3>
+              <p>{faq.answer}</p>
+            </div>
+          ))}
 
-          <div className={styles.faqItem}>
-            <h3>How do I schedule a consultation?</h3>
-            <p>
-              You can schedule a consultation by filling out our contact form, calling our office, 
-              or sending us an email. One of our advisors will get back to you within 24 business hours.
-            </p>
-          </div>
-
-          <div className={styles.faqItem}>
-            <h3>What is your investment approach?</h3>
-            <p>
-              Our investment approach is based on thorough market research, strategic diversification, 
-              and a focus on long-term value creation. We tailor our strategies to each client's unique goals and risk tolerance.
-            </p>
-          </div>
         </div>
       </div>
     </div>

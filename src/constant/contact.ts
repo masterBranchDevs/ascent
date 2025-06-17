@@ -37,8 +37,34 @@ const SOCIALS = [
         link: "https://www.instagram.com/scoopinvestment"
     }
 ]
+const generateId = (text) => text.toLowerCase().replace(/[^\w\s]/gi, '').split(" ").join("-");
+
+const FAQS_DATA = [
+    {
+        id: generateId("What are the charges I need to pay"),
+        question: "What are the charges I need to pay?",
+        answer: "Rs 12,000 per annum, and it needs to be paid in advance.",
+    },
+    {
+        id: generateId("Can I claim refund in case I don't want it"),
+        question: "Can I claim a refund in case I don't want it?",
+        answer: "No, because we unlock all the premium content once you have subscribed to the plan. So strictly no refunds are allowed.",
+    },
+    {
+        id: generateId("What is the tenure of subscription"),
+        question: "What is the tenure of subscription?",
+        answer: "1 year is the tenure, post which you would be required to renew your subscription to continue your plan.",
+    },
+    {
+        id: generateId("What is included in the plan"),
+        question: "What is included in the plan?",
+        answer: "All fundamental stock picks and special situations that arise during the year would be provided throughout the year.",
+    }
+];
+
 
 export {
     GET_IN_TOUCH,
-    SOCIALS
+    SOCIALS,
+    FAQS_DATA,
 }
