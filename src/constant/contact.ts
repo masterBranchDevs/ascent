@@ -37,7 +37,7 @@ const SOCIALS = [
         link: "https://www.instagram.com/scoopinvestment"
     }
 ]
-const generateId = (text) => text.toLowerCase().replace(/[^\w\s]/gi, '').split(" ").join("-");
+const generateId = (text: string) => text.toLowerCase().replace(/[^\w\s]/gi, '').split(" ").join("-");
 
 const FAQS_DATA = [
     {
