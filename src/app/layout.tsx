@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import { METADATA } from "@/constant/site";
 
 export const metadata: Metadata = METADATA
+
+import "./globals.css";
 import "./layout.styles.scss";
 
 export default function RootLayout({
