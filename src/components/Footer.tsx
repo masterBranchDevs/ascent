@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from './Footer.module.scss';
-import { NAVIGATION_LINKS } from "@/constant/site";
+import { NAVIGATION_LINKS, OTHER_LINKS } from "@/constant/site";
 import { SOCIALS } from "@/constant/contact";
 
 const Footer = () => {
@@ -34,12 +34,19 @@ const Footer = () => {
                     </Link>
                   </li>
                 ))}
-                <li>
-                  <Link href="/termsandconditions">Terms & Conditions</Link>
-                </li>
-                <li>
-                  <Link href="/privacypolicy">Privacy Policy</Link>
-                </li>
+              </ul>
+            </div>
+
+            <div className={styles.column}>
+              <h3>Other links</h3>
+              <ul>
+                {OTHER_LINKS.map((OTHER_LINK, index) => (
+                  <li key={OTHER_LINK.title + index}>
+                    <Link href={OTHER_LINK.link}>
+                      {OTHER_LINK.title}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 

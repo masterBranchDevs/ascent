@@ -81,4 +81,23 @@ const NAVIGATION_LINKS = [
     }
 ]
 
-export { METADATA, NAVIGATION_LINKS };
+const OTHER_LINKS = [
+    {
+        title: "Privacy Policy",
+        link: "/privacy-policy",
+    },
+    {
+        title: "Terms of Service",
+        link: "/terms-of-service",
+    },
+    {
+        title: "Disclaimer",
+        link: "/#disclaimer",
+    },
+    {
+        title: "Compliance",
+        link: "/compliance",
+    }
+]
+
+export { METADATA, NAVIGATION_LINKS, OTHER_LINKS };

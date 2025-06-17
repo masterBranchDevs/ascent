@@ -91,6 +91,22 @@ const Page = () => {
         </div>
       </section>
 
+
+      {/* Disclaimer Section */}
+      <section className={`section ${styles.ourMission}`} id="disclaimer">
+        <div className="container">
+          <h2 className="section-title">Disclaimer</h2>
+          <div className={styles.missionContent}>
+            <p>
+              The information provided on this website is for informational purposes only and should not be considered as financial advice. Scoop Investment does not guarantee the accuracy, completeness, or timeliness of the information presented. All investments involve risks, including the loss of principal. You should consult with a qualified financial advisor before making any investment decisions.
+            </p>
+            <p>
+              <strong>ScoopInvestment</strong> is a trade/brand name used by Chirag Jain (Individual SEBI Registered Research Analyst INH000020624) to provide equity research services in the Indian Equity Markets.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       {/*<section className={`section ${styles.testimonials}`}>*/}
       {/*  <div className="container">*/}
