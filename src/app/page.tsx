@@ -26,7 +26,7 @@ const Page = () => {
       <section className={`section ${styles.features}`}>
         <div className="container">
           <h2 className="section-title">Why Choose Scoop Investment</h2>
-          <p className="section-subtitle">We specialize in midcap, small, and micro-cap companies that are typically overlooked but offer strong growth opportunities</p>
+          <p className="section-subtitle">We specialize in <strong>Mid-Cap, Small-Cap, and Micro-Cap</strong> companies that are typically overlooked but offer strong growth opportunities</p>
 
           <div className={styles.featureGrid}>
             {WHY_CHOOSE.map((item, index) => (
@@ -54,7 +54,7 @@ const Page = () => {
               <p>At Scoop Investment, we believe in the power of research-driven investing to uncover high-potential opportunities others often miss.</p>
               <p>With over 7 years of experience in equity research and capital markets, Chirag Jain offers deep insights and conviction-based investment strategies tailored for long-term wealth creation.<br />
                 Specializing in unlisted shares, pre-IPO advisory, and financial content, Chirag combines rigorous analysis with a strategic mindset to guide investors through emerging and undercovered opportunities.</p>
-              <Link href="/our-story" className="btn">Learn More About Us</Link>
+              <Link href="/our-story" className={`btn ${styles.aboutContentLink}`}>Learn More About Us</Link>
             </div>
           </div>
         </div>
@@ -79,10 +79,11 @@ const Page = () => {
           <div className={styles.aboutGrid}>
             <div className={styles.aboutContent}>
               <h2>Meet Our Expert</h2>
-              <p className={styles.teamPosition}>Founder & CEO</p>
+              <p className={styles.teamPosition}>Chirag Jain - Founder & CEO</p>
               <p>With over 7 years of experience in equity research and capital markets, Chirag Jain brings extensive expertise in identifying high-conviction, long-term investment opportunities grounded in deep fundamental analysis. His approach is centered on value investing principles, long-term wealth creation, and a disciplined research methodology.</p>
               <p>Chirag specializes in unlisted equities, pre-IPO advisory, and emerging growth stories across sectors. He advises a diverse client base, including high-net-worth individuals (HNIs), family offices, and boutique investment firms, helping them navigate private market opportunities with clarity and confidence.</p>
               <p>In addition to his investment advisory work, Chirag is actively involved in financial media and investor education. He creates insightful, data-driven content aimed at simplifying complex market concepts for a broader audience. His work reflects a commitment to transparency, independent thinking, and delivering value through informed decision-making.</p>
+              <a href="https://scoopinvestment.substack.com/" className={`btn ${styles.aboutContentLink}`}>Chirag Jain Writes</a>
             </div>
             <div className={styles.aboutImage}>
               <div className={styles.meetOutExpert}></div>
