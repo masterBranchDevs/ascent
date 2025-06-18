@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import styles from './about.module.scss';
-import {WHAT_SETS_US_APART} from "@/constant/about";
+import { WHAT_SETS_US_APART } from "@/constant/about";
 
 const About = () => {
   return (
@@ -20,8 +20,8 @@ const About = () => {
           <div className={styles.storyGrid}>
             <div className={styles.storyContent}>
               <h2>Our Story</h2>
-              <p>Founded in 2005, Scoop Investment was established with a clear vision: to provide transparent, accessible, and personalized financial services to individuals and businesses alike.</p>
-              <p>What began as a small advisory firm has grown into a trusted financial partner for clients across the nation. Despite our growth, we've maintained our commitment to personalized service and building lasting relationships with our clients.</p>
+              <p>Founded in 2025, Scoop Investment was established with a clear vision: to provide transparent, accessible, and personalized financial services to individuals and businesses alike.</p>
+              <p>What began as a small advisory firm has plans to grow into a trusted financial partner for clients across the nation. Despite our growth, we strive to maintain our commitment to building lasting relationships with our clients.</p>
               <p>Our team of certified financial planners and investment advisors brings decades of combined experience to help you navigate the complexities of financial planning and investment management.</p>
             </div>
             <div className={styles.storyImage}>
@@ -41,7 +41,7 @@ const About = () => {
           </div>
 
           <div className={styles.valuesGrid}>
-          {WHAT_SETS_US_APART.map((item,  index) => (
+            {WHAT_SETS_US_APART.map((item, index) => (
               <div className={styles.valueCard} key={item.title + index}>
                 <div className={styles.valueIcon}>
                   <item.icon />
@@ -49,7 +49,7 @@ const About = () => {
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </div>
-          ))}
+            ))}
           </div>
 
         </div>

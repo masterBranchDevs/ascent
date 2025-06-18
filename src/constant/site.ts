@@ -68,8 +68,8 @@ const NAVIGATION_LINKS = [
         link: "/",
     },
     {
-        title: "Our Story",
-        link: "/our-story",
+        title: "About",
+        link: "/about",
     },
     {
         title: "Services",

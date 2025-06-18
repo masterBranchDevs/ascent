@@ -3,7 +3,7 @@ import styles from './compliance.module.scss'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>under development</div>
   )
 }
 
