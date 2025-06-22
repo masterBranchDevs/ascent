@@ -11,7 +11,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "globals": "^16.2.0",
+=======
+    "axios": "^1.10.0",
+>>>>>>> Stashed changes
+=======
+    "axios": "^1.10.0",
+>>>>>>> Stashed changes
     "next": "^15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
