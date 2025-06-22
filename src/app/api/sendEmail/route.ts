@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
+import {BREVO_SENDER_EMAIL,BREVO_RECEIVER_EMAIL,SENDER_NAME,RECEIVER_NAME} from "@/utils"
+
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
@@ -11,14 +13,15 @@ export async function POST(req: NextRequest) {
   }
 
   try {
+    console.log(process.env.BREVO_API_KEY)
     const response = await axios.post(
       "https://api.brevo.com/v3/smtp/email",
       {
         sender: {
           name: "Kevin Patil",
-          email: "your-sender-email@example.com",
+          email: BREVO_SENDER_EMAIL,
         },
-        to: [{ email: "receiver@example.com", name: "Receiver Name" }],
+        to: [{ email: BREVO_RECEIVER_EMAIL, name: "Receiver Name" }],
         subject: `Contact Form: ${subject}`,
         htmlContent: `
           <h2>New Contact Message</h2>
@@ -30,7 +33,7 @@ export async function POST(req: NextRequest) {
       },
       {
         headers: {
-          "api-key": process.env.BREVO_API_KEY!,
+          "api-key": "J1q4t8a0mTZR2PNw",
           "Content-Type": "application/json",
         },
       }

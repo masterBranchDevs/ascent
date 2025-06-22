@@ -29,11 +29,12 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/sendEmail", {
+      const response = await fetch("/api/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+      console.log(response)
 
       const contentType = response.headers.get("content-type");
 
