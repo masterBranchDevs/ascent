@@ -1,5 +1,8 @@
+import { ReactNode } from "react";
+
 // Type interfaces (if not yet declared)
 export interface ComplaintData {
+  pendingOver3Months: ReactNode;
   srNo: number;
   receivedFrom: string;
   pendingLastMonth: number;
@@ -39,6 +42,7 @@ export const complaintsData: ComplaintData[] = [
     totalPending: 0,
     pending3Months: 0,
     avgResolutionTime: 0,
+    pendingOver3Months: 0
   },
   {
     srNo: 2,
@@ -49,6 +53,7 @@ export const complaintsData: ComplaintData[] = [
     totalPending: 0,
     pending3Months: 0,
     avgResolutionTime: 0,
+    pendingOver3Months: 0
   },
   {
     srNo: 3,
@@ -59,6 +64,7 @@ export const complaintsData: ComplaintData[] = [
     totalPending: 0,
     pending3Months: 0,
     avgResolutionTime: 0,
+    pendingOver3Months: 0
   },
 ];
 

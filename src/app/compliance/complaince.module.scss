@@ -1,77 +1,243 @@
 .container {
-  padding: 90px 0 40px;
-  background: linear-gradient(to bottom, #1e5748 0%, #e6f4f1 70%);
-  border-bottom-left-radius: 80px;
-  border-bottom-right-radius: 80px;
+  padding: 120px 0 60px;
+  background: linear-gradient(to bottom, var(--primary-color) 0%, #e6f4f1 70%);
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
   color: #202020;
+
+  @media (max-width: 768px) {
+    padding: 80px 0 40px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
 }
 
 .innerContent {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 60px;
+
+  @media (max-width: 768px) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 20px;
+  }
 }
 
 .heading {
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   color: #fff;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
 }
 
 .dropdownWrapper {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
 }
 
 .dropdownHeader {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
-  padding: 12px 0;
+  padding: 15px 0;
   color: #f4f4f4;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+
+  &:hover {
+    color: #fff;
+  }
+
+  // Arrow animation
+  &::before {
+    content: "►";
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    padding: 12px 0;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
+}
+
+// Rotate arrow when dropdown is open
+.dropdownHeader[data-open="true"]::before {
+  transform: rotate(90deg);
 }
 
 .dropdownContent {
   background: #e6f4f1;
-  padding: 14px 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
+  padding: 0 24px;
   color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0;
+
+  // Animation when open
+  &.open {
+    max-height: 200px; // Adjust based on content
+    opacity: 1;
+    padding: 18px 24px;
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+    
+    &.open {
+      padding: 15px 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    
+    &.open {
+      padding: 12px 16px;
+    }
+  }
 }
 
 .tablesSection {
-  padding: 20px 0;
+  padding: 30px 0;
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 40px 0 20px;
+    color: #1e5748;
+
+    @media (max-width: 768px) {
+      font-size: 22px;
+      margin: 30px 0 16px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+      margin: 25px 0 14px;
+    }
+  }
 }
 
-.tablesSection h2 {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 30px 0 16px;
-  color: #1e5748;
+.tableWrapper {
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+
+  @media (max-width: 1024px) {
+    overflow-x: auto;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 35px;
+  }
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 40px;
+  table-layout: auto;
+
+  @media (max-width: 1024px) {
+    min-width: 700px;
+  }
+
+  th,
+  td {
+    padding: 15px 18px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    text-align: left;
+    word-wrap: break-word;
+
+    @media (max-width: 1200px) {
+      padding: 12px 14px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 12px 14px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 480px) {
+      padding: 10px 12px;
+      font-size: 13px;
+    }
+  }
+
+  th {
+    background: #e6f4f1;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+
+  tr:hover {
+    background: #f0f8f5;
+  }
 }
 
-.table th,
-.table td {
-  padding: 12px 16px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  text-align: left;
-}
+.note {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
 
-.table th {
-  background: #e6f4f1;
-  font-weight: 600;
-}
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 
-.table tr:nth-child(even) {
-  background: #f9f9f9;
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
 }
