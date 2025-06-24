@@ -29,7 +29,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/email", {
+      const response = await fetch("/api/sendEmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
