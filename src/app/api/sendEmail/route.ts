@@ -13,21 +13,22 @@ export async function POST(req: NextRequest) {
   }
 
   try {
+
     const response = await axios.post(
       "https://api.brevo.com/v3/smtp/email",
       {
         sender: {
-          name: "ScoopInvestment",
+          name: "Scoop Investment",
           email: BREVO_SENDER_EMAIL,
         },
-        to: [{ email: BREVO_RECEIVER_EMAIL, name: "Master Branch" }],
+        to: [{ email: BREVO_RECEIVER_EMAIL, name: "Receiver Name" }],
         templateId: 1,
         params: {
-            FIRSTNAME: name,
-            EMAIL: email,
-            PHONE: phone || "Not provided",
-            SUBJECT: subject,
-            MESSAGE: message
+          FIRSTNAME: name,
+          EMAIL: email,
+          PHONE: phone || "Not provided",
+          SUBJECT: subject,
+          MESSAGE: message
         },
       },
       {
