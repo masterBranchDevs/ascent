@@ -36,13 +36,16 @@ const Contact = () => {
       });
       console.log(response)
 
+      console.log("Response status:", response.status);
+
       const contentType = response.headers.get("content-type");
 
       if (contentType && contentType.includes("application/json")) {
         const result = await response.json();
+        console.log("Response data:", result);
 
         if (response.ok) {
-          console.log("Email sent:", result);
+          console.log("✅ Email sent successfully.");
           setSubmitted(true);
           setFormData({
             name: "",
@@ -55,16 +58,16 @@ const Contact = () => {
             setSubmitted(false);
           }, 5000);
         } else {
-          console.error("Failed:", result);
+          console.error("❌ Failed to send email:", result);
           alert("Failed to send your message. Please try again later.");
         }
       } else {
         const text = await response.text();
-        console.error("Unexpected response:", text);
+        console.error("⚠️ Unexpected response:", text);
         alert("Unexpected server response. Check server logs.");
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("❌ Error submitting form:", error);
       alert("Something went wrong. Please try again later.");
     }
 
