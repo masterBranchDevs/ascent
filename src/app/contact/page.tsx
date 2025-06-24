@@ -29,17 +29,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
-<<<<<<< Updated upstream
       const response = await fetch("/api/sendEmail", {
-=======
-<<<<<<< Updated upstream
-      console.log("📡 Sending request to /api/sendEmail");
-
-      const response = await fetch("/api/sendEmail", {
-=======
-      const response = await fetch("/api/email", {
->>>>>>> Stashed changes
->>>>>>> Stashed changes
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

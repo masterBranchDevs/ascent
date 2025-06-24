@@ -33,7 +33,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "build/types/**/*.ts",
-    "next-env.d.ts",
+    "next-env.d.ts", "src/app/api/sendinblue.js",
   ],
   "exclude": [
     "node_modules"
