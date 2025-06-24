@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
 
+import { BREVO_SENDER_EMAIL, BREVO_RECEIVER_EMAIL, BREVO_API_KEY } from "@/utils"
+
 export async function POST(req: NextRequest) {
 
   const body = await req.json();
@@ -15,28 +17,26 @@ export async function POST(req: NextRequest) {
       "https://api.brevo.com/v3/smtp/email",
       {
         sender: {
-          name: "Master Branchh",
-          email: "masterbranch.contact@gmail.com",
+          name: "ScoopInvestment",
+          email: BREVO_SENDER_EMAIL,
         },
-        to: [{ email: "masterbranch.contact@gmail.com", name: "Master Branch" }],
-        subject: `Contact Form: ${subject}`,
-        htmlContent: `
-          <h2>New Contact Message</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone:</strong> ${phone}</p>
-          <p><strong>Message:</strong><br/>${message}</p>
-        `,
+        to: [{ email: BREVO_RECEIVER_EMAIL, name: "Master Branch" }],
+        templateId: 1,
+        params: {
+            FIRSTNAME: name,
+            EMAIL: email,
+            PHONE: phone || "Not provided",
+            SUBJECT: subject,
+            MESSAGE: message
+        },
       },
       {
         headers: {
-          "api-key": process.env.BREVO_API_KEY,
+          "api-key": BREVO_API_KEY,
           "Content-Type": "application/json",
         },
       }
     );
-
-    console.log("✅ Email sent successfully:", response.data);
     return NextResponse.json({ message: "Email sent", data: response.data });
   } catch (error: any) {
     console.error("❌ Error sending email:", error.response?.data || error.message);
