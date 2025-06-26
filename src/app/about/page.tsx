@@ -20,9 +20,9 @@ const About = () => {
           <div className={styles.storyGrid}>
             <div className={styles.storyContent}>
               <h2>Our Story</h2>
-              <p>Founded in 2025, Scoop Investment was established with a clear vision: to provide transparent, accessible, and personalized financial services to individuals and businesses alike.</p>
-              <p>What began as a small advisory firm has plans to grow into a trusted financial partner for clients across the nation. Despite our growth, we strive to maintain our commitment to building lasting relationships with our clients.</p>
-              <p>Our team of certified financial planners and investment advisors brings decades of combined experience to help you navigate the complexities of financial planning and investment management.</p>
+              <p>Founded in 2021, Scoop Investment was established with a clear vision: to provide transparent, accessible, and personalized financial services to individuals and businesses alike.</p>
+              <p>What began as a family office has plans to grow into a trusted financial partner for clients across the nation. Despite our growth, we strive to maintain our commitment to building lasting relationships with our clients.</p>
+              <p>Our team of research advisors brings together a decades of combined experience to help you navigate the complexities of financial planning and investment management.</p>
             </div>
             <div className={styles.storyImage}>
               <div className={styles.imageWrapper}></div>

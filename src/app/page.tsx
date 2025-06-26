@@ -53,7 +53,7 @@ const Page = () => {
               <h2>Your Trusted Financial Partner</h2>
               <p>At Scoop Investment, we believe in the power of research-driven investing to uncover high-potential opportunities others often miss.</p>
               <p>With over 7 years of experience in equity research and capital markets, Chirag Jain offers deep insights and conviction-based investment strategies tailored for long-term wealth creation.<br />
-                Specializing in unlisted shares, pre-IPO advisory, and financial content, Chirag combines rigorous analysis with a strategic mindset to guide investors through emerging and undercovered opportunities.</p>
+                Specializing in unlisted shares, pre-IPO advisory, and financial content. Chirag combines rigorous analysis with a strategic mindset to guide investors through emerging and undercovered opportunities.</p>
               <Link href="/our-story" className={`btn ${styles.aboutContentLink}`}>Learn More About Us</Link>
             </div>
           </div>
@@ -67,7 +67,7 @@ const Page = () => {
           <h2 className="section-title">Our Mission</h2>
           <div className={styles.missionContent}>
             <p>At Scoop Investment, our mission is to empower our clients to achieve financial independence through expert guidance, innovative solutions, and unwavering integrity.</p>
-            <p>We believe that financial success is not just about growing wealth, but about creating security, pursuing dreams, and leaving a lasting legacy. Our holistic approach considers all aspects of your financial life to create a comprehensive strategy tailored to your unique goals and circumstances.</p>
+            <p>We believe that financial success is not just about growing wealth, but about creating security, pursuing dreams, and leaving a lasting legacy. </p>
           </div>
         </div>
       </section>
@@ -78,7 +78,7 @@ const Page = () => {
         <div className="container">
           <div className={styles.aboutGrid}>
             <div className={styles.aboutContent}>
-              <h2>Meet Our Expert</h2>
+              <h2>Meet Our Team</h2>
               <p className={styles.teamPosition}>Chirag Jain - Founder & CEO</p>
               <p>With over 7 years of experience in equity research and capital markets, Chirag Jain brings extensive expertise in identifying high-conviction, long-term investment opportunities grounded in deep fundamental analysis. His approach is centered on value investing principles, long-term wealth creation, and a disciplined research methodology.</p>
               <p>Chirag specializes in unlisted equities, pre-IPO advisory, and emerging growth stories across sectors. He advises a diverse client base, including high-net-worth individuals (HNIs), family offices, and boutique investment firms, helping them navigate private market opportunities with clarity and confidence.</p>
@@ -102,7 +102,7 @@ const Page = () => {
               The information provided on this website is for informational purposes only and should not be considered as financial advice. Scoop Investment does not guarantee the accuracy, completeness, or timeliness of the information presented. All investments involve risks, including the loss of principal. You should consult with a qualified financial advisor before making any investment decisions.
             </p>
             <p>
-              <strong>ScoopInvestment</strong> is a trade/brand name used by Chirag Jain (Individual SEBI Registered Research Analyst INH000020624) to provide equity research services in the Indian Equity Markets.
+              <strong>Scoop Investment</strong> is a trade/brand name used by Chirag Jain (Individual SEBI Registered Research Analyst INH000020624) to provide equity research services in the Indian Equity Markets.
             </p>
           </div>
         </div>
