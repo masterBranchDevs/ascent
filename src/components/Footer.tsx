@@ -10,7 +10,7 @@ const Footer = () => {
         <div className={styles.topSection}>
           <div className={styles.footerLogo}>
             <Link href="/">
-              <span className={styles.primaryText}>Scoop</span>
+              <span className={styles.primaryText}>Scoop</span>&nbsp;
               <span className={styles.secondaryText}>Investment</span>
             </Link>
             <p>Financial solutions for your future.</p>

@@ -70,7 +70,7 @@ const CompliancePage: React.FC = () => {
         </div>
 
         <div className={styles.tablesSection}>
-          <h2>Formats for Investors Complaints Data (May 2025)</h2>
+          <h2> Investors Complaints Data (May 2025)</h2>
           <div className={styles.tableWrapper}>
             <table className={styles.table}>
               <thead>
