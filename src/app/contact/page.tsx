@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "./contact.module.scss";
-import { GET_IN_TOUCH, SOCIALS, FAQS_DATA } from "@/constant/contact";
+import { GET_IN_TOUCH, SOCIALS } from "@/constant/contact";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -217,22 +217,6 @@ const Contact = () => {
             <i className="fa-solid fa-map-location-dot"></i>
             <p>Map location of our office</p>
           </div>
-        </div>
-      </div>
-
-      <div className={styles.faqSection}>
-        <h2>Frequently Asked Questions</h2>
-        <div className={styles.faqList}>
-          {FAQS_DATA.map((faq, index) => (
-            <div
-              className={styles.faqItem}
-              id={faq.question + index}
-              key={faq.id}
-            >
-              <h3>{faq.question}</h3>
-              <p>{faq.answer}</p>
-            </div>
-          ))}
         </div>
       </div>
     </div>
