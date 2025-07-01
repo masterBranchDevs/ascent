@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
 
-import { BREVO_SENDER_EMAIL, BREVO_RECEIVER_EMAIL, BREVO_API_KEY } from "@/utils"
+import { BREVO_SENDER_EMAIL, BREVO_RECEIVER_EMAIL, BREVO_API_KEY } from "@/config";
 
 export async function POST(req: NextRequest) {
 

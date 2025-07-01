@@ -35,7 +35,7 @@ const PrivacyPolicy = () => {
                     {section.id}. {section.title}
                   </h2>
                   <p className={styles.sectionContent}>
-                    {section.content}
+                    {section.content}&nbsp;
                     {section.hasEmail && (
                       <a href="mailto:contact@scoopinvestment.com" className={styles.contactLink}>
                         contact@scoopinvestment.com
