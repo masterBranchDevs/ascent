@@ -97,6 +97,10 @@ const OTHER_LINKS = [
     {
         title: "Compliance",
         link: "/compliance",
+    },
+    {
+        title: "Investor Charter",
+        link: "/investor-charter",
     }
 ]
 

@@ -1,8 +1,6 @@
 .container {
   padding: 120px 0 60px;
   background: linear-gradient(to bottom, var(--primary-color) 0%, #e6f4f1 70%);
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
   color: #202020;
 
   @media (max-width: 768px) {
