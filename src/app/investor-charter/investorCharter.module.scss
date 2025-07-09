@@ -1,27 +1,3 @@
-.gradientContainer{
-  max-width: 100%;
-  height: 100svh;
-  overflow-x: hidden;
-  overflow-y: visible;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  .gradientOverlay {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100svw;
-    height: 45vh;
-    background: linear-gradient(to bottom, var(--primary-color) 5%, transparent);
-    pointer-events: none;
-    z-index: 1;
-    border-bottom-right-radius: 80%;
-    border-bottom-left-radius: 80%;
-    transform: scale(1.5);
-  }
-}
-
 .charterPage {
   min-height: 100vh;
   z-index: 2;
