@@ -21,6 +21,8 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   line-height: 1.6;
+  overflow-x: hidden;
+
   .nav-top-fix{
     position: absolute;
     height: 75px;
