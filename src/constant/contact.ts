@@ -3,9 +3,9 @@ import { MdOutlineAlternateEmail } from "react-icons/md";
 
 const GET_IN_TOUCH = [
     {
-      icon: FaMapPin,
-      title: "Address",
-      description: "G-17 Shyam plaza, VIP road, Surat - 395007",
+        icon: FaMapPin,
+        title: "Address",
+        description: "G-17 Shyam plaza, VIP road, Surat - 395007",
     },
     {
         icon: FaPhone,
@@ -23,7 +23,7 @@ const GET_IN_TOUCH = [
         description: "Monday - Friday: 10:00 AM - 8:00 PM\n" + "\n" +
             "Saturday - Sunday: Closed"
     }
-]
+] as const;
 
 const SOCIALS = [
     {
@@ -36,7 +36,7 @@ const SOCIALS = [
         title: "Instagram",
         link: "https://www.instagram.com/scoopinvestment"
     }
-]
+] as const;
 const generateId = (text: string) => text.toLowerCase().replace(/[^\w\s]/gi, '').split(" ").join("-");
 
 const FAQS_DATA = [
@@ -60,7 +60,7 @@ const FAQS_DATA = [
         question: "What is included in the plan?",
         answer: "All fundamental stock picks and special situations that arise during the year would be provided throughout the year.",
     }
-];
+] as const;
 
 
 export {

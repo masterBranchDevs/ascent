@@ -76,8 +76,8 @@ const NAVIGATION_LINKS = [
         link: "/services",
     },
     {
-        title: "Resources",
-        link: "/resources",
+        title: "Reports",
+        link: "/reports",
     },
 
     {

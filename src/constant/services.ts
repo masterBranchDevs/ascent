@@ -29,7 +29,7 @@ const SERVICES = [
         description: "Our real estate services include property acquisition, development, and management for long-term value creation.",
         icon: "fa-solid fa-building",
     },
-];
+] as const;
 
 const INVESTMENT_STEPS = [
     {
@@ -52,7 +52,7 @@ const INVESTMENT_STEPS = [
         "description": "Our approach is rooted in thorough fundamental research—not technical charts—ensuring every recommendation is backed by conviction and clarity.",
         "icon": "04"
     }
-]
+] as const;
 
 export {
     SERVICES,
