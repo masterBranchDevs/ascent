@@ -24,7 +24,7 @@ const WHY_CHOOSE = [
         title: "No Technicals, Just Fundamentals",
         description: "We rely solely on deep, fundamental-driven stock research.",
     },
-];
+] as const;
 
 
 const TESTIMONIALS: Testimonial[] = [
@@ -70,7 +70,7 @@ const TESTIMONIALS: Testimonial[] = [
         author_designation: "Product Manager, InnovateCorp",
         initials: "EM"
     }
-];
+] as const;
 
 
 export {

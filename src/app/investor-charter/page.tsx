@@ -83,7 +83,7 @@ const InvestorCharterPage: React.FC = () => {
 
   if (!INVESTOR_CHARTER_DATA || !INVESTOR_CHARTER_DATA.sections) {
     return (
-      <div className={styles.charterPage}>
+      <div className={styles.charterPage} data-aos="fade-up">
         <div className={styles.container}>
           <p>Investor Charter data is not available.</p>
         </div>
@@ -93,9 +93,7 @@ const InvestorCharterPage: React.FC = () => {
 
   return (
     <>
-      <div className={styles.gradientContainer}>
-        <div className={styles.gradientOverlay}></div>
-      </div>
+     <div className="nav-top-fix"></div>
 
       <div className={styles.charterPage}>
         <div className={styles.spacer}></div>
@@ -103,10 +101,10 @@ const InvestorCharterPage: React.FC = () => {
         <div className={styles.container}>
           <div className={styles.contentGrid}>
             <div className={styles.header}>
-              <h1 className={styles.mainTitle}>
+              <h1 className={styles.mainTitle} data-aos="fade-up">
                 {INVESTOR_CHARTER_DATA.title || 'Investor Charter'}
               </h1>
-              <div className={styles.introText}>
+              <div className={styles.introText} data-aos="fade-up">
                 <p>
                   Comprehensive guidelines and principles governing our investment 
                   approach and commitment to stakeholder transparency.
@@ -121,19 +119,20 @@ const InvestorCharterPage: React.FC = () => {
                   className={styles.policySection}
                   aria-labelledby={`section-${section.id}`}
                 >
-                  <h2 
+                  <h2 data-aos="fade-up" 
                     id={`section-${section.id}`}
                     className={styles.sectionTitle}
                   >
                     {`${section.id}. ${section.title}`}
                   </h2>
                   
-                  <div className={styles.sectionContent}>
+                  <div className={styles.sectionContent} data-aos="fade-up">
                     {section.content?.map((block, index) => 
                       renderContentBlock(
                         {
                           ...block,
-                          type: block.type as 'paragraph' | 'list' | 'heading' | 'address'
+                          type: block.type as 'paragraph' | 'list' | 'heading' | 'address',
+                          items: 'items' in block && block.items ? [...block.items] : undefined
                         },
                         index
                       )

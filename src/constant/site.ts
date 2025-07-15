@@ -76,9 +76,15 @@ const NAVIGATION_LINKS = [
         link: "/services",
     },
     {
+        title: "Reports",
+        link: "/reports",
+    },
+
+    {
         title: "Contact",
         link: "/contact",
     }
+    
 ]
 
 const OTHER_LINKS = [

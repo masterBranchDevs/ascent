@@ -158,4 +158,4 @@ export const TERMS_DATA = {
       ],
     },
   ],
-};
+} as const;

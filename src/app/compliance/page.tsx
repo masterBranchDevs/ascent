@@ -18,17 +18,18 @@ const CompliancePage: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.innerContent}>
-        <h1 className={styles.heading}>Complaint Redressal</h1>
+        <h1 className={styles.heading} data-aos="fade-up">Complaint Redressal</h1>
 
         <div className={styles.dropdownWrapper}>
           <div
+          data-aos="fade-up"
             className={styles.dropdownHeader}
             onClick={() => toggleDropdown(0)}
             data-open={openDropdown === 0}
           >
             Complaint Redressal Information
           </div>
-          <div className={`${styles.dropdownContent} ${openDropdown === 0 ? styles.open : ''}`}>
+          <div className={`${styles.dropdownContent} ${openDropdown === 0 ? styles.open : ''}`} >
             <p>
               Client's queries/complaints may arise due to lack of understanding
               or a deficiency of service experienced by clients. Deficiency of
@@ -41,11 +42,12 @@ const CompliancePage: React.FC = () => {
           <div
             className={styles.dropdownHeader}
             onClick={() => toggleDropdown(1)}
-            data-open={openDropdown === 1}
+            data-open={openDropdown === 1} 
+            data-aos="fade-up"
           >
             Investor Charter in respect of Research Analyst (RA)
           </div>
-          <div className={`${styles.dropdownContent} ${openDropdown === 1 ? styles.open : ''}`}>
+          <div className={`${styles.dropdownContent} ${openDropdown === 1 ? styles.open : ''}`} >
             <p>
               This charter outlines the responsibilities and obligations of
               Research Analysts towards investors, ensuring transparency and
@@ -57,6 +59,7 @@ const CompliancePage: React.FC = () => {
             className={styles.dropdownHeader}
             onClick={() => toggleDropdown(2)}
             data-open={openDropdown === 2}
+            data-aos="fade-up"
           >
             Grievances
           </div>
@@ -70,9 +73,9 @@ const CompliancePage: React.FC = () => {
         </div>
 
         <div className={styles.tablesSection}>
-          <h2> Investors Complaints Data (May 2025)</h2>
+          <h2 data-aos="fade-up"> Investors Complaints Data (May 2025)</h2>
           <div className={styles.tableWrapper}>
-            <table className={styles.table}>
+            <table className={styles.table} data-aos="fade-up">
               <thead>
                 <tr>
                   <th>Sr. No.</th>
@@ -102,9 +105,9 @@ const CompliancePage: React.FC = () => {
             </table>
           </div>
 
-          <h2>Trend of Monthly Disposal of Complaints</h2>
-          <div className={styles.tableWrapper}>
-            <table className={styles.table}>
+          <h2 data-aos="fade-up">Trend of Monthly Disposal of Complaints</h2>
+          <div className={styles.tableWrapper} >
+            <table className={styles.table} data-aos="fade-up">
               <thead>
                 <tr>
                   <th>Sr. No.</th>
@@ -129,9 +132,9 @@ const CompliancePage: React.FC = () => {
               </tbody>
             </table>
           </div>
-          <h2>Trend of Yearly Disposal of Complaints</h2>
+          <h2 data-aos="fade-up">Trend of Yearly Disposal of Complaints</h2>
           <div className={styles.tableWrapper}>
-            <table className={styles.table}>
+            <table className={styles.table} data-aos="fade-up">
               <thead>
                 <tr>
                   <th>Sr. No.</th>
@@ -156,7 +159,7 @@ const CompliancePage: React.FC = () => {
               </tbody>
             </table>
           </div>
-          <div className={styles.note}>
+          <div className={styles.note} data-aos="fade-up">
             <p>*Inclusive of complaints of previous years resolved in the current year.</p>
             <p>#Inclusive of complaints pending as on the last day of the year.</p>
           </div>

@@ -133,4 +133,4 @@ export const INVESTOR_CHARTER_DATA = {
       ],
     },
   ],
-};
+} as const;

@@ -1,10 +1,15 @@
+body.no-scroll {
+  overflow: hidden !important;
+  width: 100vw;
+}
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: transparent;
-  padding: 20px 0;
+  padding: 8px 0;
   z-index: 1000;
   transition: all 0.3s ease;
   backdrop-filter: blur(0px);
@@ -14,9 +19,18 @@
     -webkit-backdrop-filter: blur(12.9px);
     backdrop-filter: blur(12.9px);
     border-bottom: 1px solid rgba(2, 54, 55, 0.13);
-    padding: 10px 0;
+    padding: 6px 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
+}
+
+// Enhance navbar glassy look
+.navbar {
+  background: rgba(20, 40, 50, 0.35);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
 }
 
 
@@ -67,6 +81,174 @@
   }
 }
 
+.desktopNavItems, .mobileNavItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-left: 30px;
+    margin-bottom: 0;
+    @media (max-width: 768px) {
+      margin-left: 0;
+      margin-bottom: 24px;
+    }
+
+    a {
+      color: var(--light-text);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      padding: 8px 0;
+      display: inline-block;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--accent-color);
+        transition: all 0.3s ease;
+      }
+
+      &:hover::after,
+      &.active::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--primary-color);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobileHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px 0 28px;
+}
+
+.mobileHeader .logo {
+  width: 140px;
+  display: flex;
+  align-items: center;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 2.2rem;
+  cursor: pointer;
+  z-index: 2200;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  &:hover {
+    background: rgba(255,255,255,0.12);
+  }
+}
+
+.mobileNavItems {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.mobileNavItems.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.mobileNavItems li a {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--light-text);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+  padding: 6px 10px 4px 10px;
+  border-radius: 0;
+  display: block;
+}
+
+.mobileNavItems li a.active,
+.mobileNavItems li a:hover {
+  color: var(--accent-color);
+  background: none;
+}
+
+.mobileFooter {
+  width: 100%;
+  margin-top: auto;
+  padding: 32px 0 18px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.socials {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials a {
+  color: var(--light-text);
+  font-size: 1.7rem;
+  transition: color 0.2s;
+}
+
+.socials a:hover {
+  color: var(--accent-color);
+}
+
+.copyright {
+  color: var(--light-text);
+  font-size: 0.95rem;
+  opacity: 0.7;
+  text-align: center;
+}
+
 .mobileToggle {
   display: none;
   flex-direction: column;
@@ -110,11 +292,62 @@
   }
 }
 
+.desktopNavItems a.active,
+.mobileNavItems a.active {
+  color: var(--accent-color);
+  font-weight: 700;
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.desktopNavItems li a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--light-text);
+  text-decoration: none;
+  padding: 2px 4px;
+  border-radius: 0;
+  transition: color 0.2s;
+  background: none;
+}
+
+.desktopNavItems li a.active,
+.desktopNavItems li a:hover {
+  color: var(--accent-color);
+  background: none;
+}
+
+@media (min-width: 769px) {
+  .overlay,
+  .mobileNavItems,
+  .mobileHeader,
+  .mobileFooter {
+    display: none !important;
+  }
+  .desktopNavItems {
+    display: flex !important;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 @media (max-width: 768px) {
+  .desktopNavItems {
+    display: none !important;
+  }
+  .navItems {
+    display: none;
+  }
+  .desktopNavItems {
+    display: none;
+  }
   .mobileToggle {
     display: flex;
   }
-
   .navItems {
     position: absolute;
     top: 100%;

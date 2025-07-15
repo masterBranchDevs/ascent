@@ -1,11 +1,12 @@
-import type { Metadata } from 'next'
-
+import type { Metadata } from 'next';
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { METADATA } from "@/constant/site";
+import Provider from "@/app/provider"
 
-export const metadata: Metadata = METADATA
+export const metadata: Metadata = METADATA;
+
 import "./layout.styles.scss";
 
 export default function RootLayout({
@@ -22,9 +23,11 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <Provider>
         <Navbar />
         {children}
         <Footer />
+        </Provider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

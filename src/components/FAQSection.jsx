@@ -4,7 +4,7 @@ import styles from "./FAQSection.module.scss";
 
 const FAQSection = () => {
   return (
-      <div className={styles.faqSection}>
+      <div className={styles.faqSection} data-aos="fade-up">
         <h2>Frequently Asked Questions</h2>
         <div className={styles.faqList}>
           {FAQS_DATA.map((faq, index) => (

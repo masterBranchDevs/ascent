@@ -21,6 +21,14 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   line-height: 1.6;
+  .nav-top-fix{
+    position: absolute;
+    height: 75px;
+    background-color: var(--secondary-color)!important;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+  }
 }
 
 .container {

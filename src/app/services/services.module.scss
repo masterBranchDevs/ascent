@@ -1,15 +1,19 @@
 .servicesContainer {
   width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
+  box-sizing: border-box;
+  /* Remove max-width: 100% and overflow-x: hidden to prevent double scrollbars */
 }
 
 .heroSection {
   background: url("/images/hero-background-mobile.webp") center center/cover no-repeat;
   color: var(--light-text);
   text-align: center;
-  padding: 150px 0 80px;
+  padding: 120px 0 80px;
   margin-bottom: 50px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   h1 {
     color: #ffffff;
@@ -55,6 +59,8 @@
   max-width: 1200px;
   margin: 0 auto 5rem;
   padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -237,11 +243,11 @@
   position: absolute;
   bottom: 0;
   left: -300px;
-  z-index: 20;
+  z-index: -1;
   pointer-events: none;
   mix-blend-mode: multiply;
   rotate: 90deg;
-  opacity: 0.1;
+  opacity: 0.1 !important;
 
   @media (max-width: 992px)  {
     display: none;
@@ -251,11 +257,11 @@
 // Responsive adjustments
 @media (max-width: 992px) {
   .heroSection {
-    height: 50vh;
+    height: 40vh;
 
     .overlay {
       h1 {
-        font-size: 2.75rem;
+        font-size: 2.25rem !important;
       }
 
       p {
@@ -304,6 +310,15 @@
         font-size: 1rem;
         padding: 0.875rem 1.75rem;
       }
+    }
+  }
+
+  .heroSection {
+    h1 {
+      font-size: 2.25rem !important;
+    }
+    p {
+      font-size: 1rem !important;
     }
   }
 }

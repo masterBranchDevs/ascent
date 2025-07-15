@@ -60,7 +60,7 @@ const POLICY_SECTIONS = [
     content: "If you have any questions regarding our policies, feel free to contact us via email.",
     hasEmail: true
   }
-];
+] as const;
 
 export {
   POLICY_SECTIONS

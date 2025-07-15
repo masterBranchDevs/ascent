@@ -2,7 +2,6 @@ import { FaHandshakeSimple } from "react-icons/fa6";
 import { FaSearch, FaBalanceScale, FaUserFriends  } from "react-icons/fa";
 
 
-
 const WHAT_SETS_US_APART = [
     {
         "title": "Aligned Interests",
@@ -24,7 +23,7 @@ const WHAT_SETS_US_APART = [
         "description": "We value feedback, embrace continuous improvement, and are committed to building lasting relationships through trust and performance.",
         "icon": FaUserFriends
     }
-]
+] as const;
 
 
 export {
