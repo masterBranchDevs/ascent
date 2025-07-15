@@ -131,7 +131,8 @@ const InvestorCharterPage: React.FC = () => {
                       renderContentBlock(
                         {
                           ...block,
-                          type: block.type as 'paragraph' | 'list' | 'heading' | 'address'
+                          type: block.type as 'paragraph' | 'list' | 'heading' | 'address',
+                          items: 'items' in block && block.items ? [...block.items] : undefined
                         },
                         index
                       )
