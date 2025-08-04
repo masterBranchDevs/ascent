@@ -1,5 +1,9 @@
 export const resourceInfo = {
   "IPO Note": [
+    {
+      name: "FlySBS Aviation Limited",
+      url: "https://drive.google.com/file/d/1or1cQad0YnKq4F1et56sb5-7kCz5vDXo/view?usp=drive_link"
+    },
     { 
       name: "Ace Alpha Tech Limited", 
       url: "https://drive.google.com/file/d/1mtU69Z5OE7t053beNEu9jy9ua6BXUD9l/view?usp=drive_link"
@@ -27,6 +31,12 @@ export const resourceInfo = {
     {
       name: "MIRC Electronics Ltd.",
       url: "https://drive.google.com/file/d/1Tt9_Q0jwdweaVK5_YfkgPhTqSlUD7aFo/view?usp=drive_link"
+    }
+  ],
+  "Initiating Coverage": [
+    {
+      name: "Power & Instrumentation Gujarat Limited",
+      url: "https://drive.google.com/file/d/10vwgVF26ko3rvE8RESo--Gmc2ZSpNL9r/view?usp=drive_link"
     }
   ]
 } as const;
