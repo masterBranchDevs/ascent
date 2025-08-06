@@ -19,24 +19,26 @@ export const resourceInfo = {
     {
       name: "Savy Infra & Logistics Ltd.",
       url: "https://drive.google.com/file/d/14mUe983kIgCoJ__AFBhZgy3D7TAveQaQ/view?usp=drive_link"
+    },
+    {
+      name: "Connplex Cinemas Limited",
+      url: "https://drive.google.com/file/d/1qsUQKiyl3iptFjnv8E1heb9IfiHwa-gL/view?usp=drive_link"
     }
   ],
   "Company Initiating Coverage": [
     { 
       name: "BCL Industries", 
       url: "https://drive.google.com/file/d/1Ivl7XNWqZFruCf3dbtb2igoLIIzB7Bqw/view?usp=drive_link"
+    },
+    {
+      name: "Power & Instrumentation Gujarat Limited",
+      url: "https://drive.google.com/file/d/10vwgVF26ko3rvE8RESo--Gmc2ZSpNL9r/view?usp=drive_link"
     }
   ], 
   "Rights Issue Note": [
     {
       name: "MIRC Electronics Ltd.",
       url: "https://drive.google.com/file/d/1Tt9_Q0jwdweaVK5_YfkgPhTqSlUD7aFo/view?usp=drive_link"
-    }
-  ],
-  "Initiating Coverage": [
-    {
-      name: "Power & Instrumentation Gujarat Limited",
-      url: "https://drive.google.com/file/d/10vwgVF26ko3rvE8RESo--Gmc2ZSpNL9r/view?usp=drive_link"
     }
   ]
 } as const;
