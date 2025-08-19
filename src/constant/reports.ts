@@ -23,6 +23,10 @@ export const resourceInfo = {
     {
       name: "Connplex Cinemas Limited",
       url: "https://drive.google.com/file/d/1qsUQKiyl3iptFjnv8E1heb9IfiHwa-gL/view?usp=drive_link"
+    },
+    {
+      name: "LGT Business Connextions Limited",
+      url: "https://drive.google.com/file/d/1z_NLvZGCyUaRifqEuqt3K36woGmGDcvA/view?usp=drive_link"
     }
   ],
   "Company Initiating Coverage": [
