@@ -1,4 +1,5 @@
 :root {
+  // Legacy hex colors as fallbacks
   --primary-color: #023637;
   --secondary-color: #006C6E;
   --accent-color: #ffffff;
@@ -6,7 +7,28 @@
   --light-text: #ffffff;
   --background-color: #ffffff;
   --light-background: #f7f7f7;
+
+  // OKLCH colors with raw values
+  --primary-color-okhcl-raw: 0.3024 0.0503 196.88;
+  --secondary-color-okhcl-raw: 0.4818 0.082 197.02;
+  --accent-color-okhcl-raw: 1 0 0;
+  --text-color-okhcl-raw: 0.3211 0 0;
+  --light-text-okhcl-raw: 0.3211 0 0 / 70%;
+  --background-color-okhcl-raw: 1 0 0;
+  --light-background-okhcl-raw: 0.9761 0 0;
+
+  // OKLCH colors with oklch() function for direct use
+  --primary-color-okhcl: oklch(var(--primary-color-okhcl-raw));
+  --secondary-color-okhcl: oklch(var(--secondary-color-okhcl-raw) / 50%);
+  --accent-color-okhcl: oklch(var(--accent-color-okhcl-raw));
+  --text-color-okhcl: oklch(var(--text-color-okhcl-raw));
+  --light-text-okhcl: oklch(var(--light-text-okhcl-raw));
+  --background-color-okhcl: oklch(var(--background-color-okhcl-raw));
+  --light-background-okhcl: oklch(var(--light-background-okhcl-raw));
+
+
 }
+
 
 * {
   margin: 0;

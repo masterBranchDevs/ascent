@@ -4,11 +4,32 @@
   padding: 60px 0 20px;
 }
 
+.boldText{
+  font-weight: 600;
+}
+
+.text {
+  &__secondary{
+    color: oklch(var(--accent-color-okhcl-raw) / 85%);
+  }
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    margin-bottom: 14px;
+
+    * {
+      margin: 0;
+    }
+  }
 }
 
 .topSection {
