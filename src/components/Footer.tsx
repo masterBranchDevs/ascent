@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styles from './Footer.module.scss';
 import { NAVIGATION_LINKS, OTHER_LINKS } from "@/constant/site";
 import { SOCIALS } from "@/constant/contact";
+import { cn, classNames } from '@/utils/func';
 
 const Footer = () => {
   return (
@@ -13,7 +14,10 @@ const Footer = () => {
               <span className={styles.primaryText}>Scoop</span>&nbsp;
               <span className={styles.secondaryText}>Investment</span>
             </Link>
-            <p>Financial solutions for your future.</p>
+            <div className={styles.container__flex}>
+              <p>Financial solutions for your future.</p>
+              <p className={cn(styles.boldText, styles.text__secondary)}>Nodal Officer</p>
+            </div>
             <div className={styles.licenceDetails}>
               <ul>
                 <li>Chirag Jain</li>

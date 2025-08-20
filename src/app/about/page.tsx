@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import styles from './about.module.scss';
 import { WHAT_SETS_US_APART } from "@/constant/about";
 
